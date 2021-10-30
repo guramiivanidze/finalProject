@@ -11,7 +11,7 @@ public class chromeRun {
     public static void start(){
         WebDriverManager.chromedriver().setup();
         Configuration.startMaximized = true;
-        Selenide.open("http://webdriveruniversity.com/index.html");
+        Selenide.open("http://cheri.ge/");
 
     }
     @AfterTest
