@@ -19,6 +19,12 @@ public class testMainPage extends chromeRun {
         Assert.assertEquals($("#Area").getValue(),"1");
         Assert.assertEquals($("#Perimeter").getValue(),"0");
         Assert.assertEquals($("#Angle").getValue(),"4");
+        Assert.assertEquals($("#Lamp").getValue(),"0");
+        Assert.assertEquals($("#Chandelier1").getValue(),"0");
+        Assert.assertEquals($("#Chandelier2").getValue(),"0");
+        Assert.assertEquals($("#Oval").getValue(),"0");
+        Assert.assertEquals($("#cant").getValue(),"0");
+        Assert.assertEquals($("#sum").getValue(),"00:00");
     }
     @Test
     public static void  positivtestCalculator(){
