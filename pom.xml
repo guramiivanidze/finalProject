@@ -65,7 +65,7 @@
                 <version>2.20</version>
                 <configuration>
                     <argLine>
-                        -javaagent:""${settings.localRepository}/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar""
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar"
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>Testng.xml</suiteXmlFile>
