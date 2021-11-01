@@ -24,7 +24,7 @@ public class testMainPage extends chromeRun {
         Assert.assertEquals($("#Chandelier2").getValue(),"0");
         Assert.assertEquals($("#Oval").getValue(),"0");
         Assert.assertEquals($("#cant").getValue(),"0");
-        Assert.assertEquals($("#sum").getValue(),"00:00");
+        Assert.assertEquals($("#sum").getText(),"00:00");
     }
     @Test
     public static void  positivtestCalculator(){
