@@ -15,8 +15,8 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class testingContacUsPage extends chromeRun {
     @Test
     public static void first_test(){
-        $("#contact-us").click();
-        $(byAttribute("placeholder","First Name")).setValue("gurami");
-        sleep(5000);
+        $(byAttribute("href","?page=contact")).click();
+        $(byAttribute("name","field1")).setValue("gurami");
+        sleep(1000);
     }
 }

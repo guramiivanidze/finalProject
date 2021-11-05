@@ -4,7 +4,11 @@
 
     <test name="TestSuit3" parallel="tests" >
         <classes>
-            <class name="FinalProject" />
+            <class name="testMainPage" />
+        </classes>
+    </test>
+    <test name="TestSuit4" parallel="tests" >
+        <classes>
             <class name="testingContacUsPage" />
         </classes>
     </test>
