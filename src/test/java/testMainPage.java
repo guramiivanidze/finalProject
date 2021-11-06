@@ -1,4 +1,6 @@
 import chromDrive.chromeRun;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.Configuration;
@@ -14,6 +16,8 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class testMainPage extends chromeRun {
 
     @Test
+    @Description("some descriptionssss")
+    @Step("tep1 step2 step3")
     public static void checkdefaultValues(){
 
         Assert.assertEquals($("#Area").getValue(),"1");
