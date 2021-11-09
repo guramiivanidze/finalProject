@@ -2,10 +2,9 @@ package pageobject;
 
 import com.codeborne.selenide.SelenideElement;
 import org.testng.Assert;
-
 import static com.codeborne.selenide.Selenide.$;
 
-public class mainpageobject {
+public class CalculatorMainPageObject {
 
     public SelenideElement areaelement = $("#Area");
     public SelenideElement Materialelement =  $("#Material");

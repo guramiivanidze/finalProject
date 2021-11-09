@@ -7,8 +7,9 @@ public interface contactformdata {
 
     String fullName = faker.name().fullName();
     String email = "test@gmail.com";
-    String titletest = "faker test";
-    String simpletext =  "lorem impsum";
-
-
+    String subject = "faker test";
+    String simpletext =  "lorem impsumlorem impsumlorem " +
+            "impsumlorem impsumlorem impsumlorem impsumlorem impsum";
+    String errormsg = "გთხოვთ შეავსოთ ყველა სავალდებულო ველი";
+    String successMsg = "ფორმა წარმატებით გაიგზავნა";
 }

@@ -1,20 +1,18 @@
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobject.mainpageobject;
-import stepobject.Calculatestepobject;
+import pageobject.CalculatorMainPageObject;
+import stepobject.CalculatorStepobject;
 import utils.chromeRun;
 
 import static com.codeborne.selenide.Selenide.$;
-import static dataobject.calculatordata.*;
+import static dataobject.CalculatorData.*;
 
 
 public class MainPageTest extends chromeRun {
 
     @Test (priority = 1)
     public static void checkdefaultValues(){
-        mainpageobject object = new mainpageobject();
+        CalculatorMainPageObject object = new CalculatorMainPageObject();
 
         Assert.assertEquals(object.areaelement.getValue(),"1");
         Assert.assertEquals(object.perimeterelement.getValue(),"0");
@@ -28,8 +26,8 @@ public class MainPageTest extends chromeRun {
     }
     @Test (priority = 2)
     public static void  positivtestCalculator(){
-        Calculatestepobject steps= new Calculatestepobject();
-        mainpageobject object = new mainpageobject();
+        CalculatorStepobject steps= new CalculatorStepobject();
+        CalculatorMainPageObject object = new CalculatorMainPageObject();
 
         steps
                 .EnterMaterial(Materialdata)
@@ -48,8 +46,8 @@ public class MainPageTest extends chromeRun {
 
     @Test (priority = 3)
     public static void  NegativetestCalculator(){
-        Calculatestepobject steps= new Calculatestepobject();
-        mainpageobject object = new mainpageobject();
+        CalculatorStepobject steps= new CalculatorStepobject();
+        CalculatorMainPageObject object = new CalculatorMainPageObject();
 
         steps
                 .EnterMaterial(Material2data)
