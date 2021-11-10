@@ -12,14 +12,14 @@ public class chromeRun {
     String emptyString = "";
     String NameString = "Tname";
     String gibberish = "Lorem Ipsum";
-    @BeforeTest
+    @BeforeTest (description = "set driver / max windows / open webpage")
     public static void start(){
         WebDriverManager.chromedriver().setup();
         Configuration.startMaximized = true;
         Selenide.open("http://cheri.ge/");
 
     }
-    @AfterTest
+    @AfterTest (description = "clear browsercookies")
     public static void finish(){
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();

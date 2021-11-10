@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.CalculatorMainPageObject;
@@ -12,6 +13,7 @@ public class MainPageTest extends chromeRun {
 
     @Test (priority = 1)
     public static void checkdefaultValues(){
+        CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
 
         Assert.assertEquals(object.areaelement.getValue(),"1");
@@ -24,7 +26,8 @@ public class MainPageTest extends chromeRun {
         Assert.assertEquals(object.Cantelement.getValue(),"0");
         Assert.assertEquals(object.Sumelement.getText(),"00:00");
     }
-    @Test (priority = 2)
+    @Test (description = "enter all and right data", priority = 2)
+    @Description("this is positive test case")
     public static void  positivtestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
@@ -44,7 +47,8 @@ public class MainPageTest extends chromeRun {
         Assert.assertEquals(object.Sumelement.getText(),SumIntdata2);
     }
 
-    @Test (priority = 3)
+    @Test (description = "enter all and wrong data", priority = 3)
+    @Description("this is Negativet test case")
     public static void  NegativetestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
