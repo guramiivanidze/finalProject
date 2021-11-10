@@ -1,17 +1,26 @@
 import io.qameta.allure.Description;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageobject.CalculatorMainPageObject;
 import stepobject.CalculatorStepobject;
+import utils.Retry;
 import utils.chromeRun;
 
 import static com.codeborne.selenide.Selenide.$;
 import static dataobject.CalculatorData.*;
 
+@Listeners(utils.testLister.class)
 
 public class MainPageTest extends chromeRun {
 
-    @Test (priority = 1)
+    @Test (retryAnalyzer = Retry.class , priority = 1)
+    @Description(" check default Values ")
+    @Link ("https://github.com/gurglosa/finalProject")
+    @Severity(SeverityLevel.BLOCKER)
     public static void checkdefaultValues(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
@@ -28,6 +37,7 @@ public class MainPageTest extends chromeRun {
     }
     @Test (description = "enter all and right data", priority = 2)
     @Description("this is positive test case")
+    @Link ("https://github.com/gurglosa/finalProject")
     public static void  positivtestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
@@ -49,6 +59,7 @@ public class MainPageTest extends chromeRun {
 
     @Test (description = "enter all and wrong data", priority = 3)
     @Description("this is Negativet test case")
+    @Link ("https://github.com/gurglosa/finalProject")
     public static void  NegativetestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
