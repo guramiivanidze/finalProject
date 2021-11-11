@@ -1,5 +1,6 @@
 import io.qameta.allure.Description;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageobject.GalleryPageobject;
 import stepobject.GalleryStepObject;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static dataobject.GalleryData.typeOfGall;
 
-
+@Listeners(utils.testLister.class)
 public class GalleryTest extends chromeRun {
     @Description(" Check tab and pictures ")
     @Test (priority = 1)
