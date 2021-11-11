@@ -1,7 +1,6 @@
 package pageobject;
 
 import com.codeborne.selenide.SelenideElement;
-import org.testng.Assert;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalculatorMainPageObject {

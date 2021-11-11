@@ -1,7 +1,5 @@
 package dataobject;
 
-import org.testng.Assert;
-
 public interface CalculatorData {
     String Materialdata = "რუსული";
     String Areadata = "10";

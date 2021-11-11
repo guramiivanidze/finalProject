@@ -2,14 +2,19 @@
 
 <suite name="Automation Suite" thread-count="3" parallel="tests">
 
-    <test name="TestSuit3" parallel="tests" >
+    <test name="TestSuit1" parallel="tests" >
         <classes>
             <class name="MainPageTest" />
         </classes>
     </test>
-    <test name="TestSuit4" parallel="tests" >
+    <test name="TestSuit2" parallel="tests" >
         <classes>
             <class name="ContacUsPageTest" />
+        </classes>
+    </test>
+    <test name="TestSuit3" parallel="tests" >
+        <classes>
+            <class name="GalleryTest" />
         </classes>
     </test>
 </suite>

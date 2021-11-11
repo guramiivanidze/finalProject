@@ -1,8 +1,6 @@
 package pageobject;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.testng.Assert;
-
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;

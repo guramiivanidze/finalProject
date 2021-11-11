@@ -1,7 +1,5 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -10,7 +8,6 @@ import stepobject.CalculatorStepobject;
 import utils.Retry;
 import utils.chromeRun;
 
-import static com.codeborne.selenide.Selenide.$;
 import static dataobject.CalculatorData.*;
 
 @Listeners(utils.testLister.class)
@@ -20,9 +17,8 @@ public class MainPageTest extends chromeRun {
     @Test (retryAnalyzer = Retry.class , priority = 1)
     @Description(" check default Values ")
     @Link ("https://github.com/gurglosa/finalProject")
-    @Severity(SeverityLevel.BLOCKER)
-    public static void checkdefaultValues(){
-        CalculatorStepobject steps= new CalculatorStepobject();
+    public static void checkDefaultValues(){
+
         CalculatorMainPageObject object = new CalculatorMainPageObject();
 
         Assert.assertEquals(object.areaelement.getValue(),"1");
@@ -35,10 +31,12 @@ public class MainPageTest extends chromeRun {
         Assert.assertEquals(object.Cantelement.getValue(),"0");
         Assert.assertEquals(object.Sumelement.getText(),"00:00");
     }
-    @Test (description = "enter all and right data", priority = 2)
+    @Test (retryAnalyzer = Retry.class ,
+            description = "enter all and right data",
+            priority = 2)
     @Description("this is positive test case")
     @Link ("https://github.com/gurglosa/finalProject")
-    public static void  positivtestCalculator(){
+    public static void PositiveTestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
 
@@ -57,10 +55,11 @@ public class MainPageTest extends chromeRun {
         Assert.assertEquals(object.Sumelement.getText(),SumIntdata2);
     }
 
-    @Test (description = "enter all and wrong data", priority = 3)
-    @Description("this is Negativet test case")
+    @Test (description = "enter all and wrong data",
+            priority = 3)
+    @Description("this is Negative test case")
     @Link ("https://github.com/gurglosa/finalProject")
-    public static void  NegativetestCalculator(){
+    public static void  NegativeTestCalculator(){
         CalculatorStepobject steps= new CalculatorStepobject();
         CalculatorMainPageObject object = new CalculatorMainPageObject();
 
