@@ -15,4 +15,5 @@ public class ContacUsPageObject {
     public SelenideElement submitBtnelement = $(".btn");
     public SelenideElement errorMsgelement = $(".error");
     public SelenideElement successMsgelement = $(".success");
+
 }

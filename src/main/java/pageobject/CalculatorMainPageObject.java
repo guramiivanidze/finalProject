@@ -16,4 +16,16 @@ public class CalculatorMainPageObject {
     public SelenideElement Cantelement = $("#Cant");
     public SelenideElement Sumelement = $("#Sum");
 
+    public SelenideElement[] Allelementg = {
+            areaelement,
+            //Materialelement,
+            perimeterelement,
+            Angleelement,
+            Lampelement,
+            Chandelier1element,
+            Chandelier2element,
+            Ovalelement,
+            Cantelement,
+            Sumelement,
+    };
 }

@@ -22,9 +22,9 @@ public class GalleryPageobject {
 
 
     public SelenideElement receptionPicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
-    public SelenideElement KitchenPicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
-    public SelenideElement bathRoomPicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
-    public SelenideElement badRoomPicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
-    public SelenideElement PoolPicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
-    public SelenideElement officePicture = $(byXpath("/html/body/div[2]/ul/li[1]/div/div[3]/p"));
+    public SelenideElement KitchenPicture = $(byXpath("/html/body/div[2]/ul/li[2]/div/div[3]/p"));
+    public SelenideElement bathRoomPicture = $(byXpath("/html/body/div[2]/ul/li[5]/div/div[3]/p"));
+    public SelenideElement badRoomPicture = $(byXpath("/html/body/div[2]/ul/li[4]/div/div[3]/p"));
+    public SelenideElement PoolPicture = $(byXpath("/html/body/div[2]/ul/li[3]/div/div[3]/p"));
+    public SelenideElement officePicture = $(byXpath("/html/body/div[2]/ul/li[6]/div/div[3]/p"));
 }

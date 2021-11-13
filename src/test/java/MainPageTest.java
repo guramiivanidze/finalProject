@@ -1,3 +1,4 @@
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import org.testng.Assert;
@@ -20,6 +21,10 @@ public class MainPageTest extends chromeRun {
     public static void checkDefaultValues(){
 
         CalculatorMainPageObject object = new CalculatorMainPageObject();
+//        for (SelenideElement i : object.Allelementg){
+//            Assert.assertEquals(i.getValue(),"0");
+//
+//        }
 
         Assert.assertEquals(object.areaelement.getValue(),"1");
         Assert.assertEquals(object.perimeterelement.getValue(),"0");
